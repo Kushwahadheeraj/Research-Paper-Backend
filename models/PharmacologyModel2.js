@@ -1,11 +1,41 @@
 const mongoose = require("mongoose");
 
-const pharmacologySchema2 = mongoose.Schema({
+const pharmacologySchema3 = mongoose.Schema({
   _id: mongoose.Schema.Types.ObjectId,
-  sn:{type:Number,required:true},
-  compoundName: { type: String, required: true },
-  cid: { type: String, required: true },
-  pharmacologyActivity: { type: String, required: true },
+  Anticancerous: { type: String, required: true },
+  Antibacterial: { type: String, required: true },
+  Antifungal: { type: String, required: true },
+  Antiinflammattory: { type: String, required: true },
+  Antioxidant: { type: String, required: true },
+  Antidiabetic: { type: String, required: true },
+  Antiprotozons: { type: String, required: true },
+  Antiallergic: { type: String, required: true },
+  Anticonvulsant: { type: String, required: true },
+  Anticoagulant: { type: String, required: true },
+  Antiulcer: { type: String, required: true },
+  Antiaging: { type: String, required: true },
+  Antiobesity: { type: String, required: true },
+  Antianxiety: { type: String, required: true },
+  Antiinfectious: { type: String, required: true },
+  Antidepressive: { type: String, required: true },
+  Antiosteoporosis: { type: String, required: true },
+  Antineoplastic: { type: String, required: true },
+  Antialgal: { type: String, required: true },
+  Antigastritic: { type: String, required: true },
+  Antimigraine: { type: String, required: true },
+  Antispasmodic: { type: String, required: true },
+  Antipsychotic: { type: String, required: true },
+  Antiadipogenic: { type: String, required: true },
+  Antiestrogenic: { type: String, required: true },
+  Antiinsecticide: { type: String, required: true },
+  Antiproliferative: { type: String, required: true },
+  Antihypertensive: { type: String, required: true },
+  Antiamyloidogenic: { type: String, required: true },
+  Antiarthritic: { type: String, required: true },
+  Antiplateletaggregating: { type: String, required: true },
+  Antisickling: { type: String, required: true },
+  Antimelanogenesis: { type: String, required: true },
+
 });
 
-module.exports = mongoose.model("Pharmacology2",pharmacologySchema2);
+module.exports = mongoose.model("Pharmacology3",pharmacologySchema3);

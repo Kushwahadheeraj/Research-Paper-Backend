@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
 
-const pharmacologySchema3 = mongoose.Schema({
+const pharmacologySchema4 = mongoose.Schema({
   _id: mongoose.Schema.Types.ObjectId,
+  Plants: { type: String, required: true },
   Anticancerous: { type: String, required: true },
   Antibacterial: { type: String, required: true },
   Antifungal: { type: String, required: true },
@@ -38,4 +39,4 @@ const pharmacologySchema3 = mongoose.Schema({
 
 });
 
-module.exports = mongoose.model("Pharmacology3",pharmacologySchema3);
+module.exports = mongoose.model("Pharmacology4",pharmacologySchema4);
