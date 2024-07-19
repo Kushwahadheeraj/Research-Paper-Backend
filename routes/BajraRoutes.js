@@ -8,8 +8,8 @@ const router = express.Router();
 router.post("/", BajraController.addBajra);
 router.get("/:bajraId", BajraController.getOneBajra);
 router.get("/", BajraController.getAllBajras);
-router.delete("/:bajraId",checkAuth, BajraController.deleteBajra);
-router.put("/:bajraId",checkAuth, BajraController.updateBajra);
+router.delete("/delete/:bajraId",checkAuth, BajraController.deleteBajra);
+router.put("/update/:bajraId",checkAuth, BajraController.updateBajra);
 
 module.exports = router;
 

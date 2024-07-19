@@ -1,14 +1,14 @@
 const express = require("express");
 
-const PharmacologyController2 = require("../controllers/PharmacologyController2.js");
+const PharmacologyController1 = require("../controllers/PharmacologyController1.js");
 const checkAuth = require("../middlewares/check-auth");
 
 const router = express.Router();
 
-router.post("/", PharmacologyController2.addPharmacology);
-router.get("/:pharmacologyId", PharmacologyController2.getOnePharmacology);
-router.get("/", PharmacologyController2.getAllPharmacologys);
-router.delete("/:pharmacologyId",checkAuth, PharmacologyController2.deletePharmacology);
-router.put("/:pharmacologyId",checkAuth, PharmacologyController2.updatePharmacology);
+router.post("/", PharmacologyController1.addPharmacology);
+router.get("/:pharmacologyId", PharmacologyController1.getOnePharmacology);
+router.get("/", PharmacologyController1.getAllPharmacologys);
+router.delete("/delete/:pharmacologyId",checkAuth, PharmacologyController1.deletePharmacology);
+router.put("/update/:pharmacologyId",checkAuth, PharmacologyController1.updatePharmacology);
 
 module.exports = router;

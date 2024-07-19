@@ -8,7 +8,7 @@ const router = express.Router();
 router.post("/", BarleyController.addBarley);
 router.get("/:barleyId", BarleyController.getOneBarley);
 router.get("/", BarleyController.getAllBarleys);
-router.delete("/:barleyId",checkAuth, BarleyController.deleteBarley);
-router.put("/:barleyId",checkAuth, BarleyController.updateBarley);
+router.delete("/delete/:barleyId",checkAuth, BarleyController.deleteBarley);
+router.put("/update/:barleyId",checkAuth, BarleyController.updateBarley);
 
 module.exports = router;

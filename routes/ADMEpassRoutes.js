@@ -6,9 +6,9 @@ const checkAuth = require("../middlewares/check-auth");
 const router = express.Router();
 
 router.post("/", ADMEpassController.addADMEpass);
-router.get("/:bajraId", ADMEpassController.getOneADMEpass);
+router.get("/:admeId", ADMEpassController.getOneADMEpass);
 router.get("/", ADMEpassController.getAllADMEpass);
-router.delete("/:bajraId",checkAuth, ADMEpassController.deleteADMEpass);
-router.put("/:bajraId",checkAuth, ADMEpassController.updateADMEpass);
+router.delete("/delete/:admeId",checkAuth, ADMEpassController.deleteADMEpass);
+router.put("/update/:admeId",checkAuth, ADMEpassController.updateADMEpass);
 
 module.exports = router;
