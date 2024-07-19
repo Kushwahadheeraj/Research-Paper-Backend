@@ -1,4 +1,4 @@
-const Pharmacology4 = require("../models/PharmacologyModel4.js");
+const Pharmacology4 = require("../models/PharmacologyModel3.js");
 const mongoose = require("mongoose");
 
 const getOnePharmacology = async (req, res, next) => {
