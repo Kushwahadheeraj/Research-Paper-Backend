@@ -20,7 +20,13 @@ require("dotenv").config();
 const bodyParser = require("body-parser");
 
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: [process.env.PORTFOLIO_URL, process.env.DASHBOARD_URL],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
 app.use(bodyParser.json());
 
 app.use("/api/bajras", BajraRoutes);
