@@ -51,8 +51,8 @@ app.listen(process.env.PORT, () =>
 
 mongoose
   .connect(process.env.DATA_BASE_CONNECTION, {
-    useUnifiedTopology: true,
-    useNewUrlParser: true,
+    // useUnifiedTopology: true,
+    // useNewUrlParser: true,
   })
   .then(() => console.log("connected to db"))
   .catch((err) => console.error(err));
